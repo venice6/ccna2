@@ -1,7 +1,7 @@
 import telnetlib
 import json
 
-with open('autowifi.json') as f:
+with open('wificonfig.json') as f:
     data = json.load(f)
 
 for entry in data['aironet']:

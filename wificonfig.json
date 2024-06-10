@@ -1,1 +1,16 @@
-
+{
+    "aironet": [
+        {
+            "host_ip": "10.21.10.3",
+            "hostname": "21-VeniceAccessPoint",
+            "username": "admin",
+            "password": "pass",
+            "ssid": "21-RESORTSWORLD-VENICE",
+            "authentication": "open",
+            "key-man": "wap",
+            "wifi-pass": "C1sc0123",
+            "channel": "10",
+            "enc-mod": "tkip"
+        }
+    ]
+}

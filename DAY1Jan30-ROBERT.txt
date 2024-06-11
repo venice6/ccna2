@@ -382,7 +382,7 @@ route  add  200.0.0.0   mask  255.255.255.0   10.21.1.4
 
  
 @@@@@@@@@
-
+CUCM
 config t
 dial-peer voice 69 voip
  service rivanaa out-bound

@@ -106,12 +106,14 @@ route  add 10.m.0.0 mask 255.255.0.0 10.m.1.4 -p
 How to Create Default Route Cisco/PC/EndDevices:
 p1:
 config T
-ip route 0.0.0.0  0.0.0.0 10.2.1.1
+ip route 0.0.0.0  0.0.0.0 10.2.1.1 1
+ip route 0.0.0.0  0.0.0.0 10.2.1.2 2
 do sh ip route static
 
 p2:
 config T
-ip route 0.0.0.0  0.0.0.0 10.2.1.2
+ip route 0.0.0.0  0.0.0.0 10.2.1.2 1
+ip route 0.0.0.0  0.0.0.0 10.2.1.1 2
 do sh ip route static
 
 D1:
@@ -302,7 +304,7 @@ router bgp 45
  network 45.4.5.0 mask 255.255.255.0
 end
 
-TASK4: WHY OSPF AND BGP ARE BEST FRIENDS:
+TASK4: WHY OSPF AND BGP ARE BEST FRIENDS/SOULMATES FOREVER, DESTINY:
 OSPF can Inject all BGP routes int ONE ospf route: O*E2
 R1:
 CONFIG t

@@ -1,0 +1,244 @@
+Day 4
+Mastering OSI Layer
+
+3 ways to transfer bits
+1. Electrical
+V- Voltage
+2. FOC- Fiber optic 850/1310nm
+I- Interface
+3. RF-  Radio Frequency
+T- Transmission
+
+EIA-TIA B standard
+
+
+gives cisco password
+#username admin privilege 15 secret pass
+COREbaba21(config)#line vty 0 14
+COREbaba21(config-line)#login local
+
+
+hacking game
+username: ramen
+pass: ue
+wait 3 sec
+
+username: pink
+password: husband
+
+un:admin
+pass: pass
+
+task 2
+
+configuring encryption in cisco
+
+CISCO
+
+conf t
+!give private key to cisco using name
+ip domain-name rivanit.com
+crypto key generate rsa
+
+Task 3
+How do you know if you are attacked?
+TCP attack
+3 way handshake
+ping www.ccp.edu.ph
+nmap -v 50.6.160.0/24
+nmap -v 50.6.160.
+
+how to attack unprotected windows pc
+port 139
+netbios attack
+net use \\10.31.1.10\ipc$
+net stat 
+
+
+how to attack port 445
+opening victim drive C remotely
+net use h: \\10.v.1.10\c$
+netstat -s -p tcp
+
+microsoft ds and 445 is the same (hacked)
+
+filter ip
+
+Top 3 to test your network
+-ping to test layer 3
+- tracert -d
+-pathping
+
+Layer 2
+Ethernet2
+Source MAc and Destination MAc
+ARp -a
+255.255.255.255       ff-ff-ff-ff-ff-ff static broadcast many F
+ 224.0.0.252           01-00-5e-00-00-fc     static multicast
+
+
+config t
+NO ip access-list standard NOPORN1
+ip access-list standard NOPORN1
+DENY 66.254.0.0 0.0.255.255
+DENY 104.21.0.0 0.0.255.255
+DENY 68.235.0.0 0.0.255.255
+DENY 104.17.0.0 0.0.255.255
+DENY 88.208.0.0 0.0.255.255
+DENY 172.67.0.0 0.0.255.255
+DENY 208.122.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+ ip access-group NOPORN1 in
+ end
+
+
+config t
+NO ip access-list standard NOBUYME
+ip access-list standard NOBUYME
+DENY 161.49.0.0 0.0.255.255
+DENY 163.181.0.0 0.0.255.255
+DENY 47.246.0.0 0.0.255.255
+DENY 143.92.0.0 0.0.255.255
+DENY 172.64.0.0 0.0.255.255
+DENY 104.18.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+ ip access-group NOPORN1 in
+ end
+
+
+config t
+NO ip access-list standard KAMI1
+ip access-list standard KAMI1
+DENY 10.12.0.0 0.0.255.255
+DENY 10.22.0.0 0.0.255.255
+DENY 10.32.0.0 0.0.255.255
+DENY 10.42.0.0 0.0.255.255
+DENY 10.52.0.0 0.0.255.255
+DENY 10.62.0.0 0.0.255.255
+DENY 10.72.0.0 0.0.255.255
+DENY 10.82.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+ ip access-group KAMI1 in
+ end
+
+config t
+NO ip access-list standard KAMI1
+ip access-list standard KAMI1
+DENY 10.12.0.0 0.0.255.255
+DENY 10.22.0.0 0.0.255.255
+DENY 10.32.0.0 0.0.255.255
+DENY 10.42.0.0 0.0.255.255
+DENY 10.52.0.0 0.0.255.255
+DENY 10.62.0.0 0.0.255.255
+DENY 10.72.0.0 0.0.255.255
+DENY 10.82.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+no ip access-group KAMI1 in
+ end
+
+config t
+NO ip access-list standard KontiKami
+ip access-list standard KontiKami
+DENY 10.12.0.0 0.0.255.255
+DENY 10.22.0.0 0.0.255.255
+DENY 10.32.0.0 0.0.255.255
+DENY 10.42.0.0 0.0.255.255
+DENY 10.51.0.0 0.0.255.255
+DENY 10.52.0.0 0.0.255.255
+DENY 10.61.0.0 0.0.255.255
+DENY 10.62.0.0 0.0.255.255
+DENY 10.72.0.0 0.0.255.255
+DENY 10.71.0.0 0.0.255.255
+DENY 10.81.0.0 0.0.255.255
+DENY 10.82.0.0 0.0.255.255
+DENY 10.91.0.0 0.0.255.255
+Permit Any
+Int Gi 0/0/1
+ip access-group KontiKami in
+ end
+
+UNAPPLYINg the list
+
+Int Gi 0/0/1
+no ip access-group KontiKami in
+ end
+
+
+config t
+no access-list 1
+access-list 1 permit 10.12.0.0 0.0.255.255
+access-list 1 permit 10.22.0.0 0.0.255.255
+access-list 1 permit 10.32.0.0 0.0.255.255
+access-list 1 permit 10.42.0.0 0.0.255.255
+access-list 1 permit 10.52.0.0 0.0.255.255
+access-list 1 deny ANY
+do sh ip access-list 1
+
+task 4
+CONFIGURING FIREWALLS:
+top 5 Firewalls: NGFW
+1. Palo Alto
+2. Checkpoint
+3. Cisco FirePower
+4. Sonicwall
+5. Fortinet
+
+
+How to be a highly paid network engineer
+Engineer: have some system skills!
+dns server
+web server
+ftp server
+time server
+
+7 DNS entries to be legit
+ns,_, www, smtp, pop, imap, MX
+
+
+HOW to install DNs server and web servers in servers
+cmd
+powershell
+Install-WindowsFeature -name dns -includeManagementTools
+Install-WindowsFeature -name web-server -includeManagementTools
+
+
+CREATING FAKE legit business email
+sendMail: you need smtp
+getMAil: you pop
+get/send: imap
+
+gcash@kimstore21.com
+maya@kimstore21.com
+
+
+CRASHCOURSE DEVOP
+config t
+iox
+interface GigabitEthernet1
+ip address dhcp
+ip nat outside
+no shut
+exit
+!
+interface VirtualPortGroup0
+ip address 192.168.35.1 255.255.255.0
+ip nat inside
+exit
+!
+ip nat inside source list GS_NAT_ACL interface GigabitEthernet1 overload
+ip access-list standard GS_NAT_ACL
+permit 192.168.0.0 0.0.255.255
+!
+app-hosting appid guestshell
+ app-vnic gateway1 virtualportgroup 0 guest-interface 0
+    guest-ipaddress 192.168.35.3 netmask 255.255.255.0	
+	app-default-gateway 192.168.35.1  guest-interface 0 
+	name-server0 1.1.1.1
+ app-resource profile custom 
+   cpu 1500 
+   memory 512
+end

@@ -1,0 +1,805 @@
+Basic CIDR Assignment
+C:\Users\Venice>ping www.bulsu.edu.ph
+
+Pinging www.bulsu.edu.ph [172.67.167.132] with 32 bytes of data:
+Reply from 172.67.167.132: bytes=32 time=382ms TTL=54
+Reply from 172.67.167.132: bytes=32 time=88ms TTL=54
+Reply from 172.67.167.132: bytes=32 time=188ms TTL=54
+Reply from 172.67.167.132: bytes=32 time=109ms TTL=54
+
+Ping statistics for 172.67.167.132:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 88ms, Maximum = 382ms, Average = 191ms
+
+
+C:\Users\Venice>nmap -sP 172.67.167.132/24
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 20:54 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.0
+Host is up (0.48s latency).
+Nmap scan report for 172.67.167.1
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.2
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.3
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.4
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.5
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.6
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.7
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.8
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.9
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.10
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.11
+Host is up (0.47s latency).
+Nmap scan report for 172.67.167.12
+Host is up (0.39s latency).
+Nmap scan report for 172.67.167.13
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.14
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.15
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.16
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.17
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.18
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.19
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.20
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.21
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.22
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.23
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.24
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.25
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.26
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.27
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.28
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.29
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.30
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.31
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.32
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.33
+Host is up (0.38s latency).
+Nmap scan report for 172.67.167.34
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.35
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.36
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.37
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.38
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.39
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.40
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.41
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.42
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.43
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.44
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.45
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.46
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.47
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.48
+Host is up (0.42s latency).
+Nmap scan report for 172.67.167.49
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.50
+Host is up (0.36s latency).
+Nmap scan report for 172.67.167.51
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.52
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.53
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.54
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.55
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.56
+Host is up (0.35s latency).
+Nmap scan report for 172.67.167.57
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.58
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.59
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.60
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.61
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.62
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.63
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.64
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.65
+Host is up (0.42s latency).
+Nmap scan report for 172.67.167.66
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.67
+Host is up (0.42s latency).
+Nmap scan report for 172.67.167.68
+Host is up (0.42s latency).
+Nmap scan report for 172.67.167.69
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.70
+Host is up (0.42s latency).
+Nmap scan report for 172.67.167.71
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.72
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.73
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.74
+Host is up (0.41s latency).
+Nmap scan report for 172.67.167.75
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.76
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.77
+Host is up (0.084s latency).
+Nmap scan report for 172.67.167.78
+Host is up (0.083s latency).
+Nmap scan report for 172.67.167.79
+Host is up (0.082s latency).
+Nmap scan report for 172.67.167.80
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.81
+Host is up (0.080s latency).
+Nmap scan report for 172.67.167.82
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.83
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.84
+Host is up (0.075s latency).
+Nmap scan report for 172.67.167.85
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.86
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.87
+Host is up (0.068s latency).
+Nmap scan report for 172.67.167.88
+Host is up (0.067s latency).
+Nmap scan report for 172.67.167.89
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.90
+Host is up (0.062s latency).
+Nmap scan report for 172.67.167.91
+Host is up (0.060s latency).
+Nmap scan report for 172.67.167.92
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.93
+Host is up (0.057s latency).
+Nmap scan report for 172.67.167.94
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.95
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.96
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.97
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.98
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.99
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.100
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.101
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.102
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.103
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.104
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.105
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.106
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.107
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.108
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.109
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.110
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.111
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.112
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.113
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.114
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.115
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.116
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.117
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.118
+Host is up (0.24s latency).
+Nmap scan report for 172.67.167.119
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.120
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.121
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.122
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.123
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.124
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.125
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.126
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.127
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.128
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.129
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.130
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.131
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.132
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.133
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.134
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.135
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.136
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.137
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.138
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.139
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.140
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.141
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.142
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.143
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.144
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.145
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.146
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.147
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.148
+Host is up (0.21s latency).
+Nmap scan report for 172.67.167.149
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.150
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.151
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.152
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.153
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.154
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.155
+Host is up (0.39s latency).
+Nmap scan report for 172.67.167.156
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.157
+Host is up (0.20s latency).
+Nmap scan report for 172.67.167.158
+Host is up (0.38s latency).
+Nmap scan report for 172.67.167.159
+Host is up (0.19s latency).
+Nmap scan report for 172.67.167.160
+Host is up (0.38s latency).
+Nmap scan report for 172.67.167.161
+Host is up (0.19s latency).
+Nmap scan report for 172.67.167.162
+Host is up (0.38s latency).
+Nmap scan report for 172.67.167.163
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.164
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.165
+Host is up (0.37s latency).
+Nmap scan report for 172.67.167.166
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.167
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.168
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.169
+Host is up (0.23s latency).
+Nmap scan report for 172.67.167.170
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.171
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.172
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.173
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.174
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.175
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.176
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.177
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.178
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.179
+Host is up (0.22s latency).
+Nmap scan report for 172.67.167.180
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.181
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.182
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.183
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.184
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.185
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.186
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.187
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.188
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.189
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.190
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.191
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.192
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.193
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.194
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.195
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.196
+Host is up (0.34s latency).
+Nmap scan report for 172.67.167.197
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.198
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.199
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.200
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.201
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.202
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.203
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.204
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.205
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.206
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.207
+Host is up (0.33s latency).
+Nmap scan report for 172.67.167.208
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.209
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.210
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.211
+Host is up (0.32s latency).
+Nmap scan report for 172.67.167.212
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.213
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.214
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.215
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.216
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.217
+Host is up (0.31s latency).
+Nmap scan report for 172.67.167.218
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.219
+Host is up (0.40s latency).
+Nmap scan report for 172.67.167.220
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.221
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.222
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.223
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.224
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.225
+Host is up (0.30s latency).
+Nmap scan report for 172.67.167.226
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.227
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.228
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.229
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.230
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.231
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.232
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.233
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.234
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.235
+Host is up (0.29s latency).
+Nmap scan report for 172.67.167.236
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.237
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.238
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.239
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.240
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.241
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.242
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.243
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.244
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.245
+Host is up (0.28s latency).
+Nmap scan report for 172.67.167.246
+Host is up (0.39s latency).
+Nmap scan report for 172.67.167.247
+Host is up (0.39s latency).
+Nmap scan report for 172.67.167.248
+Host is up (0.48s latency).
+Nmap scan report for 172.67.167.249
+Host is up (0.13s latency).
+Nmap scan report for 172.67.167.250
+Host is up (0.13s latency).
+Nmap scan report for 172.67.167.251
+Host is up (0.13s latency).
+Nmap scan report for 172.67.167.252
+Host is up (0.13s latency).
+Nmap scan report for 172.67.167.253
+Host is up (0.48s latency).
+Nmap scan report for 172.67.167.254
+Host is up (0.48s latency).
+Nmap scan report for 172.67.167.255
+Host is up (0.48s latency).
+Nmap done: 256 IP addresses (256 hosts up) scanned in 8.40 seconds
+
+
+
+
+
+Using Zenmap scanning 20 hosts
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:11 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.1
+Host is up (0.15s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 106.27 seconds
+
+
+C:\Users\Venice>nmap 172.67.167.2
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:15 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.2
+Host is up (0.099s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:30 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.3
+Host is up (0.16s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 239.77 seconds
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:40 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.4
+Host is up (0.11s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 87.00 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:42 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.5
+Host is up (0.10s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 13.04 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:46 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.6
+Host is up (0.051s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 8.54 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:47 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.7
+Host is up (0.099s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 11.34 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:49 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.8
+Host is up (0.060s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 9.97 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:50 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.9
+Host is up (0.067s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 11.37 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:51 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.10
+Host is up (0.056s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 11.43 seconds
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:53 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.11
+Host is up (0.072s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 11.15 seconds
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:54 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.12
+Host is up (0.063s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 9.70 seconds
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 21:57 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.14
+Host is up (0.080s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 13.17 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 22:00 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.15
+Host is up (0.078s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 9.11 seconds
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 22:02 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.17
+Host is up (0.078s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 14.07 seconds
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 22:03 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.18
+Host is up (0.058s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 10.09 seconds
+
+
+
+C:\Users\Venice>nmap 172.67.167.19
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 22:04 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.19
+Host is up (0.059s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-06-13 22:05 Malay Peninsula Standard Time
+Nmap scan report for 172.67.167.20
+Host is up (0.057s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 9.79 seconds
+

@@ -74,7 +74,7 @@ ipv6  route  ::/0   face:cafe:face:cafe::aaaa
 
 TASK3: THE ULTIMATE SKILL FOR A NETWORK ENGINEER.
 Top 5 brands:
-1.Cisco = 75% =google,aws,azure,etc,
+1.Cisco = 75% =google,aws,azure,etc, 
         Cisco Invented the FirstEthernetSW
         Cisco Patent Expires.
 2.Dell
@@ -103,7 +103,7 @@ Switch:  flash_init
 
 TASK5: HOW TO SPOT A VERY HEALTHY SWITCH?
 super healthy: "all flashing green."
-amber/orange: needs help.
+amber/orange: needs help.  you are protected
 
 create vlans,
 transfer ports to vlans
